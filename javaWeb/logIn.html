@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+</head>
+<body>
+    <form action="/logInDo" method="POST">
+    用户：<input type="text" name="account"><br>
+    密码：<input type="password" name="password"><br>
+    验证码：<input type="text" name="verifyCode">
+    <img name="verifyCode" src="/verifyCode" onclick="this.src = this.src + '?'"><br>
+    <input type="submit" value="提交">
+    </form>
+</body>
+</html>

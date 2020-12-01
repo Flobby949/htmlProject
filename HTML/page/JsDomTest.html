@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo">
+       
+      <p id="p0">这是第一个段落.</p>
+      
+      <p id="p1">这是一个段落.</p>
+       
+      <p id="p2">这是另外一个段落.</p>
+    </div>
+
+    <script>
+      //创建一个新的段落
+      var p = document.createElement("p");
+      var node = document.createTextNode("一些替换文本");
+      //添加文本到段落
+      p.appendChild(node);
+      var div = document.getElementById("demo");
+      //将段落添加到div中
+      div.appendChild(p);
+      //删除一段文字
+      var child = document.getElementById("p1");
+      div.removeChild(child);
+      //替换一段文字
+      var child2 = document.getElementById("p2");
+      div.replaceChild(p, child2);
+    </script>
+  </body>
+</html>

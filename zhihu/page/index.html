@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页 - 知乎</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="icon" href="../img/网页标签logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="first">
+      <div id="right">
+        <a href="../page/index.html" class="logo">
+          <img src="../img/logo.jpg" height="50px" />
+        </a>
+        <a href="../page/index.html" class="index">首页</a>
+        <img src="../img/blue.jpg" class="blue" width="28px" />
+        <a href="#" class="explore">发现</a>
+        <a href="#" class="question">等你来答</a>
+      </div>
+
+      <div id="search">
+        <form method="post">
+          <input
+            type="text"
+            placeholder="   2020年值得买的东西"
+            class="textfield"
+            onclick="changeImg(),shrink()"
+            onblur="clearChange(),reduction()"
+          />
+
+          <input
+            type="image"
+            src="../img/搜索.png"
+            id="imagebotton"
+            width="18px"
+          />
+        </form>
+      </div>
+
+      <div id="submitbotton">
+        <form method="post">
+          <input type="submit" value="提问" class="submit" />
+        </form>
+      </div>
+
+      <div id="left">
+        <a href="#" class="ring">
+          <img src="../img/铃.jpg" width="40px" />
+        </a>
+        <a href="#" class="message">
+          <img src="../img/消息.jpg" width="40px" />
+        </a>
+        <a href="#" class="head">
+          <img src="../img/head.jpg" width="30px" class="headpicture" />
+        </a>
+      </div>
+    </header>
+
+  <script>
+    
+    function changeImg(){
+    var img = document.getElementById("imagebotton");
+    img.src = "../img/搜2.png";
+    }
+
+    function clearChange(){
+      var img = document.getElementById("imagebotton");
+    img.src = "../img/搜索.png";
+    }
+
+
+    var h = 33;
+    var w = 58;
+    var a = document.getElementsByClassName("submit")[0];
+
+    function reduction(){
+        a.style.height = "33px";
+        a.style.width = "58px";
+    }
+
+    function shrink(){
+      while(h>=1){
+        h = h*0.9;
+        w = w*0.9;
+        a.style.height = h +"px";
+        a.style.width = w +"px";
+      }
+    }
+
+  </script>
+
+    <div class="headdiv">
+      <header class="second">
+        <div class="left2">
+          <a href="../page/index.html" class="logo2">
+            <img src="../img/logo.jpg" height="50px" />
+          </a>
+          <a href="#" id="recommand">推荐</a>
+          <a href="#" id="follow">关注</a>
+          <a href="#" id="hottop">热榜</a>
+        </div>
+        <form action="#" method="post" id="search2">
+          <input
+            type="text"
+            placeholder="   搜索你感兴趣的内容..."
+            class="textfield2"
+          />
+          <input type="submit" value="提问" class="submit2" />
+        </form>
+        <form action="#" method="post" id="imgbotton2">
+          <input
+            type="image"
+            src="../img/搜索.png"
+            class="imagebotton2"
+            width="18px"
+          />
+        </form>
+      </header>
+    </div>
+
+    <script>
+      
+    </script>
+
+    <div class="main">
+      <div class="content">
+        <a href="#" id="recommand2">推荐</a>
+        <a href="#" id="follow2">关注</a>
+        <a href="#" id="hottop2">热榜</a>
+        <hr class="one" />
+        <div class="labeldiv">
+          <a href="#">
+            <input type="button" value="全站" id="all" />
+          </a>
+          <a href="#">
+            <input type="button" value="视频" id="video" />
+          </a>
+          <a href="#">
+            <input type="button" value="科学" id="science" />
+          </a>
+
+          <input type="button" value="数码" id="digital" />
+          <input type="button" value="体育" id="sport" />
+          <input type="button" value="时尚" id="fashion" />
+          <input type="button" value="影视" id="movie" />
+          <input type="button" value="  展开         " id="more" />
+          <input
+            type="image"
+            src="../img/展 开.png"
+            id="moreimg"
+            width="10px"
+          />
+        </div>
+        <hr class="two" />
+        <div class="list">
+          <div id="num3">1</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>湖人 106:93 轻取热火获得总冠军，如何评价这场比赛？</h2>
+              </a>
+            </div>
+            <p id="supplement"></p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />4697万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img
+            src="../img/lakers.png"
+            id="hotimg"
+            width="170px"
+            height="100px"
+          />
+        </div>
+
+        <div class="list">
+          <div id="num3">2</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>
+                  国家安全机关破获数百起台湾间谍窃密案，有哪些信息值得关注？
+                </h2>
+              </a>
+            </div>
+            <p id="supplement">
+              近期，国家安全机关组织实施「迅雷-2020」专项行动，依...
+            </p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />1458万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img src="../img/spy.jpeg" id="hotimg" width="170px" height="100px" />
+        </div>
+
+        <div class="list">
+          <div id="num3">3</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>如何看待王一博摩托车比赛中被胡通明带倒一事？</h2>
+              </a>
+            </div>
+            <p id="supplement">
+              补充：王一博的最新回应「我的粉丝不要帮我骂 有些事我自己说
+              摔车是不幸 但是每一个运动员要用正常心态面对的事...
+            </p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />1171万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img src="../img/wyb.jpg" id="hotimg" width="170px" height="100px" />
+        </div>
+
+        <div class="list">
+          <div id="num">4</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>如何看待63岁上市公司董事长娶38岁妻子？</h2>
+              </a>
+            </div>
+            <p id="supplement"></p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />1081万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img src="../img/p3.jpg" id="hotimg" width="170px" height="100px" />
+        </div>
+
+        <div class="list">
+          <div id="num">5</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>
+                  假如让你去当保安，工资是你现在的十倍，其他待遇都有，你愿意去吗？
+                </h2>
+              </a>
+            </div>
+            <p id="supplement"></p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />1081万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img
+            src="../img/zhenxiang.jpg"
+            id="hotimg"
+            width="170px"
+            height="100px"
+          />
+        </div>
+
+        <div class="list">
+          <div id="num">6</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>詹姆斯获得19-20赛季总决赛MVP，你有什么想说的？</h2>
+              </a>
+            </div>
+            <p id="supplement">
+              在刚刚结束的总决赛G6中，湖人轻取热火，以4-2的大比分...
+            </p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />789万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img
+            src="../img/james.png"
+            id="hotimg"
+            width="170px"
+            height="100px"
+          />
+        </div>
+
+        <div class="list">
+          <div id="num">7</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>如何看待LDG世界赛失利，极端观众给小花生寄花圈？</h2>
+              </a>
+            </div>
+            <p id="supplement">打的菜归菜，可是这么干是不是过分了</p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />577万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img src="../img/LGD.jpg" id="hotimg" width="170px" height="100px" />
+        </div>
+
+        <div class="list">
+          <div id="num">8</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>
+                  美国一大学孔子学院中方代表死亡，曾被警方与FBI搜查其住所，还有哪些信息值得关注？
+                </h2>
+              </a>
+            </div>
+            <p id="supplement">
+              据美国《圣路易斯邮报》9日消息，韦伯斯特大学孔子学院...
+            </p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />515万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img
+            src="../img/kongzi.png"
+            id="hotimg"
+            width="170px"
+            height="100px"
+          />
+        </div>
+
+        <div class="list">
+          <div id="num">9</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>如何看待韩国为庆祝劳动党建党75周年，选在凌晨阅兵？</h2>
+              </a>
+            </div>
+            <p id="supplement">
+              10月10日是朝鲜劳动党建党75周年纪念日。据朝鲜中央...
+            </p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />490万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img
+            src="../img/Korea.jpg"
+            id="hotimg"
+            width="170px"
+            height="100px"
+          />
+        </div>
+
+        <div class="list">
+          <div id="num">10</div>
+          <div id="hotcontent">
+            <div id="title">
+              <a href="#">
+                <h2>和牛奶的人和不喝牛奶的人差别在哪？</h2>
+              </a>
+            </div>
+            <p id="supplement">
+              牛奶的好处是什么，常喝的人和不喝的人能看出什么不一样吗？
+            </p>
+            <div id="hotlabel">
+              <img src="../img/hot.jpg" width="22px" id="hotnum" />199万热度
+              <a href="#" id="sharelabel">
+                <img src="../img/share.jpg" width="25px" id="shareimg" />
+                <span>分享</span>
+              </a>
+            </div>
+          </div>
+          <img src="../img/milk.jpg" id="hotimg" width="170px" height="100px" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="card1">
+          <div id="shang">
+            <a href="#" id="shangitem">
+              <img src="../img/answer.jpg" width="45px" id="shangimg1" />
+              <div id="shangword1">回答问题</div>
+            </a>
+
+            <a href="#" id="shangitem">
+              <img src="../img/video.jpg" width="50px" id="shangimg2" />
+              <div id="shangword2">发视频</div>
+            </a>
+
+            <a href="#" id="shangitem">
+              <img src="../img/artical.jpg" width="52px" id="shangimg3" />
+              <div id="shangword3">写文章</div>
+            </a>
+
+            <a href="#" id="shangitem">
+              <img src="../img/idea.jpg" width="52px" id="shangimg4" />
+              <div id="shangword4">写想法</div>
+            </a>
+          </div>
+          <div id="xia">
+            <a href="#">
+              <div id="xialeft">稍候答</div>
+            </a>
+            <a href="#">
+              <div id="xiaright">草稿箱</div>
+            </a>
+          </div>
+        </div>
+        <div class="card2">
+          <a href="#">
+            <div id="card2left">
+              <img src="../img/create.jpg" width="25px" />
+              <span id="card2leftword">创作中心</span>
+            </div>
+            <div id="card2right">
+              <div id="kaitong">去开通</div>
+              <div id="card2fuhao">></div>
+            </div>
+          </a>
+        </div>
+        <div class="card3">
+          <a href="https://www.zhihu.com/lives" target="_blank">
+            <div id="card3item">
+              <img src="../img/live.jpg" width="45px" />
+              <div id="card3word1">Live</div>
+            </div>
+          </a>
+          <a href="https://www.zhihu.com/pub/" target="_blank">
+            <div id="card3item">
+              <img src="../img/book.jpg" width="45px" />
+              <div id="card3word2">书店</div>
+            </div>
+          </a>
+          <a href="https://www.zhihu.com/roundtable" target="_blank">
+            <div id="card3item">
+              <img src="../img/table.jpg" width="45px" />
+              <div id="card3word3">圆桌</div>
+            </div>
+          </a>
+          <a href="https://zhuanlan.zhihu.com/" target="_blank">
+            <div id="card3item">
+              <img src="../img/exclusive.jpg" width="45px" />
+              <div id="card3word4">专栏</div>
+            </div>
+          </a>
+          <a href="https://www.zhihu.com/consult" target="_blank">
+            <div id="card3item">
+              <img src="../img/paid.jpg" width="45px" />
+              <div id="card3word5">付费咨询</div>
+            </div>
+          </a>
+          <a href="https://www.zhihu.com/wiki" target="_blank">
+            <div id="card3item">
+              <img src="../img/encyclopedia.jpg" width="45px" />
+              <div id="card3word6">百科</div>
+            </div>
+          </a>
+        </div>
+        <div id="card4">
+          <a href="https://www.zhihu.com/collections/mine" target="_blank">
+            <div id="card4item1">
+              <img src="../img/favorite.png" width="30px" />
+              <div id="card4word1">我的收藏</div>
+              <div id="card4num1">
+                <div class="card4num1">0</div>
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.zhihu.com/people/flobby-74/following/questions"
+            target="_blank"
+          >
+            <div id="card4item2">
+              <img src="../img/followquestion.png" width="30px" />
+              <div id="card4word2">我关注的问题</div>
+              <div id="card4num2">
+                <div class="card4num2">0</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.zhihu.com/question/invited" target="_blank">
+            <div id="card4item3">
+              <img src="../img/invitation.png" width="30px" />
+              <div id="card4word3">我的邀请</div>
+              <div id="card4num3">
+                <div class="card4num3">92</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.zhihu.com/balance" target="_blank">
+            <div id="card4item">
+              <img src="../img/balance.png" width="30px" />
+              <div id="card4word4">我的余额</div>
+            </div>
+          </a>
+          <a href="https://www.zhihu.com/community" target="_blank">
+            <div id="card4item">
+              <img src="../img/service.png" width="30px" />
+              <div id="card4word4">站务中心</div>
+            </div>
+          </a>
+          <a
+            href="https://www.zhihu.com/help-center/category/7/question/150"
+            target="_blank"
+          >
+            <div id="card4item">
+              <img src="../img/help.png" width="30px" />
+              <div id="card4word5">帮助中心</div>
+            </div>
+          </a>
+          <a href="https://www.zhihu.com/copyright" target="_blank">
+            <div id="card4item">
+              <img src="../img/copyright.png" width="30px" />
+              <div id="card4word6">版权服务中心</div>
+            </div>
+          </a>
+        </div>
+
+        <footer id="Footer">
+          <a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="//liukanshan.zhihu.com/"
+          >
+            刘看山&nbsp;·
+          </a>
+          <span class="Footer-dot"> </span>
+          <a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/question/19581624"
+          >
+            知乎指南&nbsp;·
+          </a>
+          <span class="Footer-dot"> </span>
+          <a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/term/zhihu-terms"
+          >
+            知乎协议&nbsp;·
+          </a>
+          <span class="Footer-dot"></span
+          ><a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/term/privacy"
+          >
+            知乎隐私保护指引 </a
+          ><br />
+          <a class="Footer-item" target="_blank" href="/app"> 应用&nbsp;· </a
+          ><span class="Footer-dot"></span
+          ><a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://app.mokahr.com/apply/zhihu"
+          >
+            工作&nbsp;· </a
+          ><span class="Footer-dot"></span
+          ><button type="button" class="Button-OrgCreateButton">
+            申请开通知乎机构号</button
+          ><br />
+          <a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://zhuanlan.zhihu.com/p/28852607"
+          >
+            侵权举报&nbsp;· </a
+          ><span class="Footer-dot"></span
+          ><a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://www.12377.cn"
+          >
+            网上有害信息举报专区 </a
+          ><br /><a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://tsm.miit.gov.cn/dxxzsp/"
+          >
+            京 ICP 证 110745 号 </a
+          ><br /><a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://beian.miit.gov.cn/"
+          >
+            京 ICP 备 13052560 号 - 1 </a
+          ><br /><a
+            class="Footer-item"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020088"
+            ><img
+              src="https://pic3.zhimg.com/80/v2-d0289dc0a46fc5b15b3363ffa78cf6c7.png"
+            />
+            京公网安备 11010802010035 号</a
+          ><br /><span class="Footer-item">
+            互联网药品信息服务资格证书<br />
+            （京）- 非经营性 - 2017 - 0067</span
+          ><span class="Footer-item"> 违法和不良信息举报：010-82716601 </span
+          ><br /><a
+            class="Footer-item"
+            target="_blank"
+            href="/term/child-jubao"
+          >
+            儿童色情信息举报专区 </a
+          ><br /><a class="Footer-item" target="_blank" href="/certificates">
+            证照中心 </a
+          ><br /><a class="Footer-item" target="_blank" href="/contact">
+            联系我们</a
+          ><span class="Footer-item">© 2020 知乎</span>
+        </footer>
+
+        <script>
+            
+          function elementFixed(id,ifCardTop,elseCardTop,ifFooterTop,elseFooterTop){
+            
+            var elementName = document.getElementById(id);
+            var absoluteHeight = elementName.offsetTop;
+
+            window.onscroll = function(){
+            var footerName = document.getElementById("Footer");  
+            var relativeHeight = document.documentElement.scrollTop;
+            var heightToTop = absoluteHeight-relativeHeight;
+              if(heightToTop <= 50){
+                elementName.style.position = 'fixed';
+                elementName.style.top = ifCardTop;
+                footerName.style.position = 'fixed';
+                footerName.style.top = ifFooterTop;
+              }else{
+                elementName.style.position = 'absolute';
+                elementName.style.top = elseCardTop;
+                footerName.style.position = 'absolute';
+                footerName.style.top = elseFooterTop;
+              }
+            }
+            
+          }
+
+          window.onload = function() {
+            elementFixed("card4","65px","","405px","");
+          }
+          
+          </script>
+      </div>
+    </div>
+  </body>
+</html>

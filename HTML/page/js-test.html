@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js代码测试</title>
+    <script src="../js/test.js"></script>
+</head>
+<body>
+    <h1>HTML</h1>
+    <form action="#" method="POST">
+        <input type="text" name="textName" id="textId">
+        <input type="button" value="提交" onclick="getText()">
+        <input type="button" value="后退一个页面" onclick="goBack()">
+        <input type="button" value="前进一个页面" onclick="goForward()">
+        <input type="button" value="后退两个页面" onclick="goBackTwo()">
+        <input type="button" value="显示距离" onclick="showDistance()">
+        <input type="button" value="创建一个POP-UP界面（仅IE浏览器）" onclick="Popup()">
+        <input type="button" value="创建界面" onclick="createFrame()">
+        <input type="button" value="移动界面(2s后关闭页面)" onclick="moveFrame()">
+        <input type="button" value="界面高度缩小100px，宽度增加200px" onclick="sizeAdjustment()">
+        <input type="button" value="向上滚动界面" onclick="scrollFrameTop()">
+        <input type="button" value="滚动界面至具体位置" onclick="scrollFrameFree()">
+
+    </form>
+    <p id="demo1" onclick="jsonParse()">
+        一个段落,点击切换。
+    </p> 
+
+<!--   
+    <script>    
+        var text = '{"employees":[' +    
+                        '{"name":"baidu","site":"http://www.baidu.com" },' +    
+                        '{"name":"Google","site":"http://www.Google.com" },' +    
+                        '{"name":"Taobao","site":"http://www.taobao.com" }]}'; 
+        obj = JSON.parse(text); 
+        var employee =  document.getElementById("demo1");
+        console.log(employee);
+        employee.innerHTML =    
+                        obj.employees[1].name + " " + obj.employees[1].site;
+    </script> 
+ -->
+
+    <img src="../img/a.jpg" id="picture_a" width="50px" onload="changePicture()" onclick="elementHeight()">
+    <script>
+        var elementId = document.getElementById("picture_a");
+        function elementHeight(){
+            alert(elementId.offsetTop+"\n"+document.documentElement.scrollTop+"\n");
+        }
+        
+    </script>
+<br><br>
+<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px">
+<!--     
+    //或者onload
+    <script>
+        var picture = document.getElementById("picture_a");
+        picture.src = "../img/b.jpg";
+    </script> 
+-->
+</body>
+</html>
