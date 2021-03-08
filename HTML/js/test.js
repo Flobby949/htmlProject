@@ -1,22 +1,21 @@
 //提示框peompt，警告框alert
-/* var user = prompt("请输入用户名");
+var user = prompt("请输入用户名");
 while(user == undefined || user == null || user == ''){
 alert("请输入正确用户名！")
 var user = prompt("请输入用户名");
 }
-alert("\n欢迎您，"+user); */
+alert("\n欢迎您，"+user);
 
 document.write("<h1>Hello JavaScript!</h1>");
 
 document.write("lalalala\n");
 
 var x = 0;
-document.write("<br>" + typeof (x) + " \n ");
+document.write("<br> x的类型是：" + typeof (x) + "<br>");
 
 var str1 = "wow";
 var str2 = "awesome";
 document.writeln(str1 + "\t" + str2);
-document.writeln("wuwuwu<br>");
 document.write(x + str1 + "<br>");
 document.write(str2 + x + "<br>");
 
@@ -30,7 +29,6 @@ MyStr = "abce";
 document.write(MyStr + "<br>");
 
 var y = '';
-document.write(typeof (y) + "<br>")
 for (i = 0; i <= 10; i++) {
     if (i == 3) {
         continue;
@@ -236,7 +234,7 @@ function jsonParse() {
 }
 
 function changePicture() {
-    var picture = document.getElementById("picture_a");
+    var picture = document.getElementById("pic-a");
     picture.src = "../img/b.jpg";
 }
 

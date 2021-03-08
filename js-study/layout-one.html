@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>浮动三栏解决⽅案</title>
+  </head>
+  <body>
+    <!--     <section class="layout float">
+      <style media="screen">
+          /* vh & vw --- 表示整高或者整宽，占满整个屏幕，兼容pc和手机 */
+        .layout.float .left {
+          float: left;
+          width: 20%;
+          height: auto;
+          background: #6b98aa;
+        }
+        .layout.float .center {
+          background: #c5c57e;
+          height: auto;
+        }
+        .layout.float .right {
+          float: right;
+          width: 20%;
+          background: #8181ca;
+          height: auto;
+        }
+      </style>
+      <h1>三栏布局 --- 浮动布局</h1>
+      <article class="left-right-center">
+        <div class="left">
+          <h2>左边</h2>
+          优点：兼容性好
+          缺点：浮动元素脱离⽂档流，要做清除浮动，这个处理不好的话，会带来
+          很多问题，⽐如⽗容器⾼度塌陷等 绝对定位布局
+        </div>
+        <div class="right">
+          <h2>右边</h2>
+        </div>
+        <div class="center">
+          <h2>浮动解决⽅案</h2>
+          <p>
+            这是三栏布局的浮动解决⽅案 这是三栏布局的浮动解决⽅案
+            这是三栏布局的浮动解决⽅案 这是三栏布局的浮动解决⽅案
+            这是三栏布局的浮动解决⽅案 这是三栏布局的浮动解决⽅案
+            这是三栏布局的浮动解决⽅案 这是三栏布局的浮动解决⽅案
+            这是三栏布局的浮动解决⽅案 这是三栏布局的浮动解决⽅案
+            这是三栏布局的浮动解决⽅案 这是三栏布局的浮动解决⽅案
+            这是三栏布局的浮动解决⽅案 这是三栏布局的浮动解决⽅案
+            这是三栏布局的浮动解决⽅案 这是三栏布局的浮动解决⽅案
+          </p>
+        </div>
+      </article>
+    </section> -->
+    <section class="layout absolute">
+      <style>
+        .layout.absolute .left-center-right > div {
+          position: absolute;
+        }
+        .layout.absolute .left {
+          left: 0;
+          width: 300px;
+          height: 50vh;
+          background: #6b98aa;
+        }
+        .layout.absolute .center {
+          left: 300px;
+          right: 300px;
+          height: auto;
+          background: #c5c57e;
+        }
+        .layout.absolute .right {
+          right: 0;
+          width: 300px;
+          height: 50vh;
+          background: #7e73af;
+        }
+      </style>
+      <h1>三栏布局</h1>
+      <article class="left-center-right">
+        <div class="left">
+          <h2>左边</h2>
+        </div>
+        <div class="center">
+          <h2>绝对定位解决⽅案</h2>
+          这是三栏布局的绝对定位解决⽅案 这是三栏布局的绝对定位解决 ⽅案
+          这是三栏布局的绝对定位解决⽅案 这是三栏布局的绝对定位解决 ⽅案
+          这是三栏布局的绝对定位解决⽅案 这是三栏布局的绝对定位解决 ⽅案
+          这是三栏布局的绝对定位解决⽅案 这是三栏布局的绝对定位解决 ⽅案
+          这是三栏布局的绝对定位解决⽅案 这是三栏布局的绝对定位解决 ⽅案
+          这是三栏布局的绝对定位解决⽅案 这是三栏布局的绝对定位解决
+          ⽅案优点：快捷，设置很⽅便，⽽且也不容易出问题。
+          缺点：容器脱离了⽂档流，后代元素也脱离了⽂档流，⾼度未知的时候，
+          会有问题，这就导致了这种⽅法的有效性和可使⽤性是⽐较差的。 flexbox布局
+        </div>
+        <div class="right">
+          <h2>右边</h2>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

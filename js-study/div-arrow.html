@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div气泡框</title>
+  </head>
+  <body>
+    <div class="element"></div>
+    <div id="wrapper">
+      <h1>555</h1>
+    </div>
+    <style>
+      /* .element {
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #727171;
+        border-left: 20px solid transparent;
+      } */
+      .element {
+        width: 100px;
+        height: 20px;
+        border-top: 20px solid red;
+      }
+      #wrapper {
+        width: 200px;
+        height: 100px;
+        position: relative;
+        margin: 100px;
+        border: 5px solid #4999ce;
+        background-color: #c1d9e9;
+        border-radius: 15px;
+        opacity: 0;
+      }
+      #wrapper::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-left-color: #4999ce;
+        position: absolute;
+        top: 60%;
+        right: -22%;
+        margin-top: -44px;
+      }
+      #wrapper::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-left-color: #c1d9e9;
+        position: absolute;
+        top: 52%;
+        right: -19%;
+        margin-top: -36px;
+      }
+    </style>
+    <button class="bt" onclick="doClick()">click</button>
+    <style>
+      .bt {
+        border: none;
+        background-color: rgb(82, 163, 255);
+        border-radius: 5px;
+        height: 40px;
+        width: 80px;
+        font-size: 22px;
+        position: absolute;
+        top: 190px;
+        left: 340px;
+      }
+    </style>
+    <script language="javascript">
+      function doClick() {
+        let el = document.getElementById("wrapper");
+
+        el.style.opacity = 1;
+      }
+    </script>
+  </body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js代码测试</title>
+    <title>js代码学习</title>
     <script src="../js/test.js"></script>
 </head>
 <body>
@@ -21,7 +21,6 @@
         <input type="button" value="界面高度缩小100px，宽度增加200px" onclick="sizeAdjustment()">
         <input type="button" value="向上滚动界面" onclick="scrollFrameTop()">
         <input type="button" value="滚动界面至具体位置" onclick="scrollFrameFree()">
-
     </form>
     <p id="demo1" onclick="jsonParse()">
         一个段落,点击切换。
@@ -41,16 +40,15 @@
     </script> 
  -->
 
-    <img src="../img/a.jpg" id="picture_a" width="50px" onload="changePicture()" onclick="elementHeight()">
+    <img src="../img/a.jpg" id="picture_a" width="50px" onclick="elementHeight()">
     <script>
         var elementId = document.getElementById("picture_a");
         function elementHeight(){
             alert(elementId.offsetTop+"\n"+document.documentElement.scrollTop+"\n");
         }
-        
     </script>
 <br><br>
-<img src="../img/a.jpg" width="50px"><br><br>
+<img src="../img/a.jpg" width="50px" onclick="changePicture()" id="pic-a"><br><br>
 <img src="../img/a.jpg" width="50px"><br><br>
 <img src="../img/a.jpg" width="50px"><br><br>
 <img src="../img/a.jpg" width="50px"><br><br>
@@ -59,12 +57,6 @@
 <img src="../img/a.jpg" width="50px"><br><br>
 <img src="../img/a.jpg" width="50px"><br><br>
 <img src="../img/a.jpg" width="50px">
-<!--     
-    //或者onload
-    <script>
-        var picture = document.getElementById("picture_a");
-        picture.src = "../img/b.jpg";
-    </script> 
--->
+
 </body>
 </html>
