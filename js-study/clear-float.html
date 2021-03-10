@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>清除浮动</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .outer {
+        width: 80vw;
+        margin: 0 auto;
+        background-color: #2a6288;
+        padding: 10px;
+        /* 通过设置高度来防止父元素高度坍塌
+        height: 220px; 
+         */
+      }
+      .outer .inner {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(243, 255, 132);
+        margin: 10px;
+        float: left;
+      }
+      /* 通过新建一个div，清除浮动 */
+      /* .clear {
+          clear: both;
+      } */
+      .clearfix {
+          zoom: 1;
+      }
+      .clearfix:after {
+          display: block;
+          clear: both;
+          content: '';
+          visibility: hidden;
+          height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer clearfix">
+      <div class="inner"></div>
+      <div class="inner"></div>
+      <div class="inner"></div>
+      <div class="inner"></div>
+      <div class="inner"></div>
+      <!-- <div class="clear"></div> -->
+    </div>
+  </body>
+</html>
