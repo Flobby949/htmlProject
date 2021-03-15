@@ -5,9 +5,10 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title pug练习
+        link(rel="stylesheet", href="../../css/card.css")
     body 
         #app 
-          div(v-for="student in students" :key="student.id").card
+          div(v-for="student in students" :key="student.id" :style="{backgroundColor:student.color}").card
             .header
               img(:src="student.avatar").avatar
               h3 {{student.name}}
@@ -16,5 +17,5 @@ html(lang="en")
             p {{student.hobby}}
             p {{student.signature}}
             a(:href="student.github") github地址
-        script(type="text/javascript", src="../js/vue.js")  
-        script(type="text/javascript", src="../js/card.dev.js")
+        script(type="text/javascript", src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")  
+        script(type="text/javascript", src="../../js/card.dev.js")
